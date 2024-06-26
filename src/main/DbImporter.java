@@ -1,5 +1,7 @@
 package main;
 
+import testing.ProjektTester;
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -21,7 +23,7 @@ public class DbImporter
     private int currentImportMode = -1;
 
     // 1 Stat Tracker for every single of part of the DB file
-    DbPartStats[] ec = new DbPartStats[5];
+    ProjektTester.DbPartStats[] ec = new ProjektTester.DbPartStats[5];
 
     public void importData(boolean debugMode) throws IOException
     {
@@ -72,40 +74,21 @@ public class DbImporter
                 // Calls the specific Import Function based on the currentImport Mode
                 int returnCode = switch (currentImportMode)
                 {
-                    case 0 -> ImportUtils.importStaff(field, 0, dM);
-                    case 1 -> ImportUtils.importMovie(field, dM);
-                    case 2 -> ImportUtils.importStaff(field, 1, dM);
-                    case 3 -> ImportUtils.importStaffIntoMovie(field, 0, dM);
-                    case 4 -> ImportUtils.importStaffIntoMovie(field, 1, dM);
+                    case 0 -> dM.importStaff(field, 0);
+                    case 1 -> dM.importMovie(field);
+                    case 2 -> dM.importStaff(field, 1);
+                    case 3 -> dM.importStaffIntoMovie(field, 0);
+                    case 4 -> dM.importStaffIntoMovie(field, 1);
                     default -> 3;
                 };
 
                 // Adds to the Import Statistics
                 if (debugMode && currentImportMode != -1)
                 {
-                    ec[currentImportMode].errors[returnCode]++;
+                    System.out.println("ImportCode: " + returnCode + "Line:" + line);
                 }
             }
         }
-        if (debugMode) printStats();
-    }
-
-    /**
-     * Debug Function to print the amount of correct and incorrect Data after importing
-     */
-    private void printStats()
-    {
-        System.out.println("Actor Count: " + dM.staffMaps[0].size() + " Successfully: " + ec[0].errors[0] + " Blank " + ec[0].errors[1] + " Duplicate: " + ec[0].errors[2] + " KeyNotFound: " + ec[0].errors[3]);
-        System.out.println("Movie Count: " + dM.movies.size() + " Successfully: " + ec[1].errors[0] + " Blank: " + ec[1].errors[1] + " Duplicate: " + ec[1].errors[2] + " KeyNotFound: " + ec[2].errors[3]);
-        System.out.println("Director Count: " + dM.staffMaps[1].size() + " Successfully: " + ec[2].errors[0] + " Blank: " + ec[2].errors[1] + " Duplicate: " + ec[2].errors[2] + " KeyNotFound: " + ec[1].errors[3]);
-        System.out.println("Actor Movie Relation" + " Successfully: " + ec[3].errors[0] + " Blank: " + ec[3].errors[1] + " KeyNotFound: " + ec[3].errors[3]);
-        System.out.println("Director Movie Relation" + " Successfully: " + ec[4].errors[0] + " Blank: " + ec[4].errors[1] + " KeyNotFound: " + ec[4].errors[3]);
-        int correctLines = ec[0].errors[0] + ec[1].errors[0] + ec[2].errors[0] + ec[3].errors[0] + ec[4].errors[0];
-        int incorrectLines = ec[0].errors[1] + ec[1].errors[1] + ec[2].errors[1] + ec[0].errors[2] + ec[1].errors[2] + ec[2].errors[2] + ec[3].errors[1] + ec[3].errors[3] + ec[4].errors[1] + ec[4].errors[3];
-        int totalLines = 88810;
-        int analysedLines = correctLines + incorrectLines;
-        int missingLines = totalLines - analysedLines - 5;
-        System.out.println("Total Lines: " + totalLines + " Analysed Lines: " + analysedLines + " Correct Lines: " + correctLines + " Incorrect Lines: " + incorrectLines + " Identifier Lines: 5" + " Missing Lines : " + missingLines);
     }
 }
 

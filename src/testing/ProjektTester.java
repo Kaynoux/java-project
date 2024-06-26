@@ -1,4 +1,4 @@
-package main;
+package testing;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
@@ -31,7 +31,8 @@ public class ProjektTester
         if (passed)
         {
             System.out.println("Alle Tests bestanden ᕕ( ᐛ )ᕗ");
-        } else
+        }
+        else
         {
             System.out.println("Leider nicht alle Tests bestanden.");
         }
@@ -90,7 +91,8 @@ public class ProjektTester
                     passed = false;
                     System.err.println("Test: " + arg + " fehlgeschlagen, weil Anzahl der Schauspieler nicht stimmen. Erwartet: " + schauspielerComma + ", erhalten: " + countComma(line));
                 }
-            } else if (line.startsWith("Filme"))
+            }
+            else if (line.startsWith("Filme"))
             {
                 if (!line.contains(filmeContains))
                 {
@@ -116,5 +118,17 @@ public class ProjektTester
     private static int countComma(String line)
     {
         return line.length() - line.replace(",", "").length();
+    }
+
+    /**
+     * Tracks Errors and Successes while importing the different DB-Parts
+     * 0 = successfull
+     * 1 = missing information
+     * 2 = duplicate
+     * 3 = id does not belong to an object
+     */
+    public static class DbPartStats
+    {
+        public int[] errors = new int[4];
     }
 }

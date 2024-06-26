@@ -1,5 +1,8 @@
 package main;
 
+import data_types.Movie;
+import data_types.Staff;
+
 import java.util.ArrayList;
 import java.util.HashSet;
 
