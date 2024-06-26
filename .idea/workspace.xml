@@ -5,12 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9d35814-069f-4f0d-99af-a55db8f63eab" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/java-project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-project.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DataManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/DbImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DbImporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/SearchUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/SearchUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/testing/ProjektTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/ProjektTester.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,43 +44,45 @@
     <option name="showLibraryContents" value="true" />
     <option name="showModules" value="false" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
-    &quot;Application.ProjektTester.executor&quot;: &quot;Run&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;/Users/lukaspiorek/Repositories/java-project&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/lukaspiorek/Repositories/java-project/src/Main.java&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.Main.executor": "Run",
+    "Application.ProjektTester.executor": "Run",
+    "Application.Testing.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "/Users/lukaspiorek/Repositories/java-project",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.stylelint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.stylelint": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "onboarding.tips.debug.path": "/Users/lukaspiorek/Repositories/java-project/src/Main.java",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.ide.settings.uml",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/resources" />
     </key>
   </component>
-  <component name="RunManager">
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Application.ProjektTester">
+    <configuration name="ProjektTester" type="Application" factoryName="Application" temporary="true">
       <option name="ALTERNATIVE_JRE_PATH" value="openjdk-22" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <option name="PROGRAM_PARAMETERS" value="--schauspielernetzwerk=17562" />
+      <option name="MAIN_CLASS_NAME" value="main.ProjektTester" />
+      <module name="java-project" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="data_types.*" />
+          <option name="PATTERN" value="dataTypes.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -87,9 +90,21 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="Testing" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="main.Main" />
+      <module name="java-project" />
+      <option name="PROGRAM_PARAMETERS" value="--filmsuche=&quot;Matrix&quot;" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="Application.Testing" />
+      <item itemvalue="Application.ProjektTester" />
+    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Main" />
+        <item itemvalue="Application.ProjektTester" />
       </list>
     </recent_temporary>
   </component>
@@ -122,6 +137,9 @@
       <workItem from="1719398372660" duration="231000" />
       <workItem from="1719398626674" duration="135000" />
       <workItem from="1719398777345" duration="15000" />
+      <workItem from="1719398794548" duration="243000" />
+      <workItem from="1719399189289" duration="35000" />
+      <workItem from="1719399239573" duration="1623000" />
     </task>
     <servers />
   </component>

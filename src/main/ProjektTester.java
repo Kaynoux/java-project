@@ -1,4 +1,4 @@
-package testing;
+package main;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;

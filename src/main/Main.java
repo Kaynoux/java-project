@@ -1,7 +1,7 @@
 package main;
 
-import data_types.Movie;
-import data_types.Staff;
+import dataTypes.Movie;
+import dataTypes.Staff;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -35,18 +35,18 @@ public class Main
         String[] parts = arg.split("=");
         parts[0] = parts[0].trim();
         parts[1] = parts[1].replace("\"", "").trim();
+
         switch (parts[0])
         {
             case "--filmsuche":
-                movieSearch(parts[0], dM);
+                movieSearch(parts[1], dM);
                 break;
             case "--schauspielersuche":
-                actorSearch(parts[0], dM);
+                actorSearch(parts[1], dM);
                 break;
             case "--filmnetzwerk":
                 movieNetwork(dM, Integer.parseInt(parts[1]));
                 break;
-
             case "--schauspielernetzwerk":
                 actorNetwork(dM, Integer.parseInt(parts[1]));
                 break;

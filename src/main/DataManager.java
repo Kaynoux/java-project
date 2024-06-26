@@ -1,7 +1,7 @@
 package main;
 
-import data_types.Movie;
-import data_types.Staff;
+import dataTypes.Movie;
+import dataTypes.Staff;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;

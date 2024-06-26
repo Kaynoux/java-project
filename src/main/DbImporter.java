@@ -1,7 +1,5 @@
 package main;
 
-import testing.ProjektTester;
-
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStream;
@@ -62,6 +60,7 @@ public class DbImporter
                             currentImportMode = 4;
                             break;
                     }
+                    continue;
                 }
 
                 // Splits the remaining String into its fields and remove " and whitespaces

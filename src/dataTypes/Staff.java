@@ -1,4 +1,4 @@
-package data_types;
+package dataTypes;
 
 import java.util.HashSet;
 
