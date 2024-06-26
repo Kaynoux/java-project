@@ -5,16 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9d35814-069f-4f0d-99af-a55db8f63eab" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/testing/UnitTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/java-project.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DbImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DbImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DbPartStats.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ImportUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_types/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ProjektTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testing/ProjektTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/SearchUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/SearchUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/data_types/Staff.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,30 +39,33 @@
   <component name="ProjectId" id="2hpWMIMgv0V5lbDJof8XwzsdCCQ" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="false" />
     <option name="showLibraryContents" value="true" />
+    <option name="showModules" value="false" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.Main.executor": "Run",
-    "Application.ProjektTester.executor": "Run",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.stylelint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.stylelint": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "onboarding.tips.debug.path": "/Users/lukaspiorek/Repositories/java-project/src/Main.java",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.sourceCode.Java",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.ProjektTester.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/lukaspiorek/Repositories/java-project&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.stylelint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.stylelint&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/lukaspiorek/Repositories/java-project/src/Main.java&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.ide.settings.uml&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src/resources" />
@@ -74,8 +73,9 @@
   </component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="openjdk-22" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="main.Main" />
-      <module name="java-project" />
       <option name="PROGRAM_PARAMETERS" value="--schauspielernetzwerk=17562" />
       <extension name="coverage">
         <pattern>
@@ -112,7 +112,16 @@
       <workItem from="1718291451519" duration="42267000" />
       <workItem from="1718631898805" duration="16000" />
       <workItem from="1718653757137" duration="12921000" />
-      <workItem from="1719060611782" duration="5250000" />
+      <workItem from="1719060611782" duration="7999000" />
+      <workItem from="1719397822973" duration="196000" />
+      <workItem from="1719398025213" duration="37000" />
+      <workItem from="1719398064790" duration="15000" />
+      <workItem from="1719398136328" duration="8000" />
+      <workItem from="1719398147439" duration="94000" />
+      <workItem from="1719398259209" duration="103000" />
+      <workItem from="1719398372660" duration="231000" />
+      <workItem from="1719398626674" duration="135000" />
+      <workItem from="1719398777345" duration="15000" />
     </task>
     <servers />
   </component>
