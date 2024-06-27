@@ -120,7 +120,7 @@ public enum DataManager
         // Add Staff to Movie
         movies.get(movie_id).staffSets[staff_type].add(staffMaps[staff_type].get(staff_id));
         // Add Movie to Staff
-        staffMaps[staff_type].get(staff_id).movies.add(movies.get(movie_id));
+        staffMaps[staff_type].get(staff_id).getMovies().add(movies.get(movie_id));
 
         return 0;
     }

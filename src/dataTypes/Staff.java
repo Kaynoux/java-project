@@ -7,13 +7,29 @@ import java.util.HashSet;
  */
 public class Staff
 {
-    public int id;
-    public String name;
-    public HashSet<Movie> movies = new HashSet<>();
+    private int id;
+
+    private String name;
+    private HashSet<Movie> movies = new HashSet<>();
 
     public Staff(int id, String name)
     {
         this.id = id;
         this.name = name;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+    public String getName()
+    {
+        return name;
+    }
+
+    public HashSet<Movie> getMovies()
+    {
+        return movies;
     }
 }

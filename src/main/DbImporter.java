@@ -20,9 +20,6 @@ public class DbImporter
      */
     private int currentImportMode = -1;
 
-    // 1 Stat Tracker for every single of part of the DB file
-    ProjektTester.DbPartStats[] ec = new ProjektTester.DbPartStats[5];
-
     public void importData(boolean debugMode) throws IOException
     {
         // Load db file from resources
@@ -81,8 +78,7 @@ public class DbImporter
                     default -> 3;
                 };
 
-                // Adds to the Import Statistics
-                if (debugMode && currentImportMode != -1)
+                if (debugMode)
                 {
                     System.out.println("ImportCode: " + returnCode + "Line:" + line);
                 }

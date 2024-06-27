@@ -5,13 +5,13 @@ import java.util.HashSet;
 
 public class Movie
 {
-    public int id;
-    public String title;
-    public String description;
-    public String genre;
-    public LocalDate releaseDate;
-    public float rating;
-    public int ratingCount;
+    private int id;
+    private String title;
+    private String description;
+    private String genre;
+    private LocalDate releaseDate;
+    private float rating;
+    private int ratingCount;
 
     //0:Actors 1:Directors on the film
     public HashSet<Staff>[] staffSets = new HashSet[2];
@@ -28,4 +28,46 @@ public class Movie
         this.rating = rating;
         this.ratingCount = ratingCount;
     }
+
+    public HashSet<Staff>[] getStaffSets()
+    {
+        return staffSets;
+    }
+
+    public int getRatingCount()
+    {
+        return ratingCount;
+    }
+
+    public float getRating()
+    {
+        return rating;
+    }
+
+    public LocalDate getReleaseDate()
+    {
+        return releaseDate;
+    }
+
+    public String getGenre()
+    {
+        return genre;
+    }
+
+    public String getDescription()
+    {
+        return description;
+    }
+
+    public String getTitle()
+    {
+        return title;
+    }
+
+    public int getId()
+    {
+        return id;
+    }
+
+
 }

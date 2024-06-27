@@ -11,7 +11,7 @@ import java.util.stream.Collectors;
 
 public class Main
 {
-    // Set to true to toggle Debug mode
+    // Set to true to toggle global Debug mode
     private final static boolean debugMode = false;
 
     public static void main(String[] args)
@@ -53,7 +53,7 @@ public class Main
         }
     }
 
-    private static void actorNetwork(DataManager dM, int actor_id)
+    public static void actorNetwork(DataManager dM, int actor_id)
     {
         if (!dM.getStaff(0).containsKey(actor_id))
         {
@@ -66,14 +66,14 @@ public class Main
 
         // Print all Films from the given Actor and separate them by ","
         System.out.print("Filme: ");
-        System.out.println(dM.getStaff(0).get(actor_id).movies.stream().map(movie -> movie.title).collect(Collectors.joining(", ")));
+        System.out.println(dM.getStaff(0).get(actor_id).getMovies().stream().map(movie -> movie.getTitle()).collect(Collectors.joining(", ")));
 
         //Print all actor_results and seperate them by ","
         System.out.print("\nSchauspieler: ");
-        System.out.println(actor_results.stream().map(actor -> actor.name).collect(Collectors.joining(",")));
+        System.out.println(actor_results.stream().map(actor -> actor.getName()).collect(Collectors.joining(",")));
     }
 
-    private static void movieNetwork(DataManager dM, int movie_id)
+    public static void movieNetwork(DataManager dM, int movie_id)
     {
         if (!dM.getMovies().containsKey(movie_id))
         {
@@ -85,30 +85,32 @@ public class Main
 
         // Print all Actors which played in the given Film and separate them by ","
         System.out.print("Schauspieler: ");
-        System.out.println(dM.getMovies().get(movie_id).staffSets[0].stream().map(actor -> actor.name).collect(Collectors.joining(", ")));
+        System.out.println(dM.getMovies().get(movie_id).staffSets[0].stream().map(actor -> actor.getName()).collect(Collectors.joining(", ")));
 
         // Print all movie_results and separate by ","
         System.out.print("\nFilme: ");
-        System.out.println(movie_results.stream().map(movie -> movie.title).collect(Collectors.joining(",")));
+        System.out.println(movie_results.stream().map(movie -> movie.getTitle()).collect(Collectors.joining(",")));
     }
 
-    private static void actorSearch(String arg, DataManager dM)
+    public static void actorSearch(String arg, DataManager dM)
     {
-        ArrayList<Staff> actor_results = SearchUtils.SearchStaffByName(arg, 0, dM);
+        ArrayList<Staff> actor_results = SearchUtils.getStaffByName(arg, 0, dM);
 
         for (Staff actor : actor_results)
         {
-            System.out.println("ID: " + actor.id + " Name: " + actor.name);
+            System.out.println("ID: " + actor.getId() + " Name: " + actor.getName());
         }
     }
 
-    private static void movieSearch(String arg, DataManager dM)
+    public static void movieSearch(String arg, DataManager dM)
     {
-        ArrayList<Movie> movie_results = SearchUtils.SearchMovieByTitle(arg, dM);
+        ArrayList<Movie> movie_results = SearchUtils.getMovieByTitle(arg, dM);
 
         for (Movie movie : movie_results)
         {
-            System.out.println("ID: " + movie.id + " Title: " + movie.title + " Release: " + movie.releaseDate + " Rating: " + movie.rating + " Rating Count: " + movie.ratingCount + " Description: " + movie.description);
+            System.out.println("ID: " + movie.getId() + " Title: " + movie.getTitle() + " Release: " + movie.getReleaseDate() +
+                    " " +
+                    "Rating: " + movie.getRating() + " Rating Count: " + movie.getRatingCount() + " Description: " + movie.getDescription());
         }
     }
 }
