@@ -1,0 +1,93 @@
+@startuml
+class dataTypes.Staff {
+- int id
+- String name
+- HashSet<Movie> movies
++ int getId()
++ String getName()
++ HashSet<Movie> getMovies()
+}
+
+
+class main.SearchUtils {
++ {static} ArrayList<Movie> getMovieByTitle(String,DataManager)
++ {static} ArrayList<Staff> getStaffByName(String,int,DataManager)
++ {static} HashSet<Movie> getFilmsByActorsFromFilmID(int,int,DataManager)
++ {static} HashSet<Staff> getStaffByFilmsFromActorID(int,int,DataManager)
+}
+
+class testing.ProjektTester {
+- {static} String MAIN_CLASS
++ {static} void main(String[])
+- {static} boolean passedTestNetzwerk(String,String,String,int,int)
+- {static} int countComma(String)
+}
+
+
+class testing.ProjektTester$DbPartStats {
++ int[] errors
+}
+
+class main.DbImporter {
+~ DataManager dM
+- int currentImportMode
++ void importData(boolean)
+}
+
+
+enum main.DataManager {
++  INSTANCE
+- HashMap<Integer,Movie> movies
+- HashMap<Integer,Staff>[] staffMaps
++ HashMap<Integer,Movie> getMovies()
++ HashMap<Integer,Staff> getStaff(int)
++ int importStaff(String[],int)
++ int importMovie(String[])
++ int importStaffIntoMovie(String[],int)
+- {static} LocalDate StringToLocalDate(String)
+}
+
+
+class main.Main {
+- {static} boolean debugMode
++ {static} void main(String[])
++ {static} void actorNetwork(DataManager,int)
++ {static} void movieNetwork(DataManager,int)
++ {static} void actorSearch(String,DataManager)
++ {static} void movieSearch(String,DataManager)
+}
+
+
+class UnitTests {
+- DataManager handleImport()
++ void testImportData()
++ void testMovieSearch()
++ void testStaffSearch()
++ void testActorNetworkSearch()
++ void testMovieNetworkSearch()
+}
+
+class dataTypes.Movie {
+- int id
+- String title
+- String description
+- String genre
+- LocalDate releaseDate
+- float rating
+- int ratingCount
++ HashSet<Staff>[] staffSets
++ HashSet<Staff>[] getStaffSets()
++ int getRatingCount()
++ float getRating()
++ LocalDate getReleaseDate()
++ String getGenre()
++ String getDescription()
++ String getTitle()
++ int getId()
+}
+
+
+
+
+testing.ProjektTester +.. testing.ProjektTester$DbPartStats
+@enduml

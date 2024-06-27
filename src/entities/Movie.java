@@ -1,18 +1,17 @@
-package dataTypes;
+package entities;
 
 import java.time.LocalDate;
 import java.util.HashSet;
 
 public class Movie
 {
-    private int id;
-    private String title;
-    private String description;
-    private String genre;
-    private LocalDate releaseDate;
-    private float rating;
-    private int ratingCount;
-
+    private final int id;
+    private final String title;
+    private final String description;
+    private final String genre;
+    private final LocalDate releaseDate;
+    private final float rating;
+    private final int ratingCount;
     //0:Actors 1:Directors on the film
     public HashSet<Staff>[] staffSets = new HashSet[2];
 

@@ -1,4 +1,4 @@
-package dataTypes;
+package entities;
 
 import java.util.HashSet;
 
@@ -7,9 +7,8 @@ import java.util.HashSet;
  */
 public class Staff
 {
-    private int id;
-
-    private String name;
+    private final int id;
+    private final String name;
     private HashSet<Movie> movies = new HashSet<>();
 
     public Staff(int id, String name)

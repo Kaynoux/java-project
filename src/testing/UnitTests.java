@@ -1,5 +1,5 @@
-import dataTypes.Movie;
-import dataTypes.Staff;
+import entities.Movie;
+import entities.Staff;
 import main.DataManager;
 import main.SearchUtils;
 import org.junit.jupiter.api.Test;

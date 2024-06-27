@@ -6,13 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="f9d35814-069f-4f0d-99af-a55db8f63eab" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/java-project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/java-project.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataTypes/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataTypes/Movie.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/dataTypes/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/dataTypes/Staff.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataTypes/Movie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Movie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dataTypes/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entities/Staff.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/DataManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DataManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/DbImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DbImporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/ProjektTester.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testing/ProjektTester.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/SearchUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/SearchUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/testing/UnitTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/testing/UnitTests.java" afterDir="false" />
     </list>
@@ -56,6 +53,7 @@
     "Application.ProjektTester.executor": "Run",
     "Application.Testing.executor": "Run",
     "Downloaded.Files.Path.Enabled": "false",
+    "JUnit.UnitTests.executor": "Run",
     "JUnit.UnitTests.handleImport.executor": "Run",
     "JUnit.UnitTests.testActorNetworkSearch.executor": "Run",
     "JUnit.UnitTests.testImportData.executor": "Run",
@@ -197,7 +195,9 @@
       <workItem from="1719398777345" duration="15000" />
       <workItem from="1719398794548" duration="243000" />
       <workItem from="1719399189289" duration="35000" />
-      <workItem from="1719399239573" duration="12386000" />
+      <workItem from="1719399239573" duration="15998000" />
+      <workItem from="1719485973690" duration="1007000" />
+      <workItem from="1719487273823" duration="5521000" />
     </task>
     <servers />
   </component>

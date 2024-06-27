@@ -1,7 +1,7 @@
 package main;
 
-import dataTypes.Movie;
-import dataTypes.Staff;
+import entities.Movie;
+import entities.Staff;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -53,7 +53,7 @@ public class Main
         }
     }
 
-    public static void actorNetwork(DataManager dM, int actor_id)
+    private static void actorNetwork(DataManager dM, int actor_id)
     {
         if (!dM.getStaff(0).containsKey(actor_id))
         {
@@ -73,7 +73,7 @@ public class Main
         System.out.println(actor_results.stream().map(actor -> actor.getName()).collect(Collectors.joining(",")));
     }
 
-    public static void movieNetwork(DataManager dM, int movie_id)
+    private static void movieNetwork(DataManager dM, int movie_id)
     {
         if (!dM.getMovies().containsKey(movie_id))
         {
@@ -92,9 +92,15 @@ public class Main
         System.out.println(movie_results.stream().map(movie -> movie.getTitle()).collect(Collectors.joining(",")));
     }
 
-    public static void actorSearch(String arg, DataManager dM)
+    private static void actorSearch(String arg, DataManager dM)
     {
         ArrayList<Staff> actor_results = SearchUtils.getStaffByName(arg, 0, dM);
+
+        if (actor_results.isEmpty())
+        {
+            System.out.println("No results found");
+            return;
+        }
 
         for (Staff actor : actor_results)
         {
@@ -102,15 +108,20 @@ public class Main
         }
     }
 
-    public static void movieSearch(String arg, DataManager dM)
+    private static void movieSearch(String arg, DataManager dM)
     {
         ArrayList<Movie> movie_results = SearchUtils.getMovieByTitle(arg, dM);
+
+        if (movie_results.isEmpty())
+        {
+            System.out.println("No results found");
+            return;
+        }
 
         for (Movie movie : movie_results)
         {
             System.out.println("ID: " + movie.getId() + " Title: " + movie.getTitle() + " Release: " + movie.getReleaseDate() +
-                    " " +
-                    "Rating: " + movie.getRating() + " Rating Count: " + movie.getRatingCount() + " Description: " + movie.getDescription());
+                    " Genre: " + movie.getGenre() + "Rating: " + movie.getRating() + " Rating Count: " + movie.getRatingCount() + " Description: " + movie.getDescription());
         }
     }
 }
