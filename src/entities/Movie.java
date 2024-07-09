@@ -12,8 +12,8 @@ public class Movie
     private final LocalDate releaseDate;
     private final float rating;
     private final int ratingCount;
-    //0:Actors 1:Directors on the film
-    public HashSet<Staff>[] staffSets = new HashSet[2];
+    //Index 0:Actors 1:Directors on the film
+    private final HashSet<Staff>[] staffSets = new HashSet[2];
 
     public Movie(int id, String title, String description, String genre, LocalDate releaseDate, float rating, int ratingCount)
     {
@@ -28,9 +28,9 @@ public class Movie
         this.ratingCount = ratingCount;
     }
 
-    public HashSet<Staff>[] getStaffSets()
+    public HashSet<Staff> getStaffSets(int staff_type)
     {
-        return staffSets;
+        return staffSets[staff_type];
     }
 
     public int getRatingCount()

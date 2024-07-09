@@ -9,7 +9,7 @@ public class Staff
 {
     private final int id;
     private final String name;
-    private HashSet<Movie> movies = new HashSet<>();
+    private final HashSet<Movie> movies = new HashSet<>();
 
     public Staff(int id, String name)
     {

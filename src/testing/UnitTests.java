@@ -12,7 +12,9 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class UnitTests
 {
-
+    /**
+     * Method to generate Test Data
+     */
     private DataManager handleImport() throws IOException
     {
         DataManager dM = DataManager.INSTANCE;
@@ -49,7 +51,7 @@ public class UnitTests
         // If 3 Actors where imported
         assertEquals(3, dM.getStaff(0).size());
         // If Movie3 has 3 Actors
-        assertEquals(3, dM.getMovies().get(3).staffSets[0].size());
+        assertEquals(3, dM.getMovies().get(3).getStaffSets(0).size());
         // if Actor1 played in 3 Movies
         assertEquals(3, dM.getStaff(0).get(1).getMovies().size());
     }
@@ -93,7 +95,7 @@ public class UnitTests
         HashSet<Movie> result = SearchUtils.getFilmsByActorsFromFilmID(3, 0, dM);
 
         // If Movie3 has 3 Actors
-        assertEquals(3, dM.getMovies().get(3).staffSets[0].size());
+        assertEquals(3, dM.getMovies().get(3).getStaffSets(0).size());
         // If there are 2 Movies in the Movie Network of Movie3
         assertEquals(2, result.size());
     }

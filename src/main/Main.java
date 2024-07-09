@@ -16,6 +16,12 @@ public class Main
 
     public static void main(String[] args)
     {
+        if (args.length == 0)
+        {
+            System.out.println("Arguments are required to run this app");
+            return;
+        }
+
         //Create Data Manager Singleton
         DataManager dM = DataManager.INSTANCE;
         DbImporter dbImporter = new DbImporter();
@@ -85,7 +91,7 @@ public class Main
 
         // Print all Actors which played in the given Film and separate them by ","
         System.out.print("Schauspieler: ");
-        System.out.println(dM.getMovies().get(movie_id).staffSets[0].stream().map(actor -> actor.getName()).collect(Collectors.joining(", ")));
+        System.out.println(dM.getMovies().get(movie_id).getStaffSets(0).stream().map(actor -> actor.getName()).collect(Collectors.joining(", ")));
 
         // Print all movie_results and separate by ","
         System.out.print("\nFilme: ");
@@ -121,7 +127,7 @@ public class Main
         for (Movie movie : movie_results)
         {
             System.out.println("ID: " + movie.getId() + " Title: " + movie.getTitle() + " Release: " + movie.getReleaseDate() +
-                    " Genre: " + movie.getGenre() + "Rating: " + movie.getRating() + " Rating Count: " + movie.getRatingCount() + " Description: " + movie.getDescription());
+                    " Genre: " + movie.getGenre() + " Rating: " + movie.getRating() + " Rating Count: " + movie.getRatingCount() + " Description: " + movie.getDescription());
         }
     }
 }

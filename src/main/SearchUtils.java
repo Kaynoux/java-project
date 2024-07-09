@@ -57,7 +57,7 @@ public class SearchUtils
         }
 
         HashSet<Movie> hits = new HashSet<>();
-        for (Staff staff : dM.getMovies().get(movie_id).staffSets[staff_type])
+        for (Staff staff : dM.getMovies().get(movie_id).getStaffSets(staff_type))
         {
             hits.addAll(staff.getMovies());
         }
@@ -81,7 +81,7 @@ public class SearchUtils
         HashSet<Staff> hits = new HashSet<>();
         for (Movie movie : dM.getStaff(staff_type).get(actor_id).getMovies())
         {
-            hits.addAll(movie.staffSets[staff_type]);
+            hits.addAll(movie.getStaffSets(staff_type));
         }
 
         // Remove the input Actor because it is not part of its own Network
