@@ -3,10 +3,8 @@ package entities;
 import java.time.LocalDate;
 import java.util.HashSet;
 
-public class Movie
+public class Movie extends Entity
 {
-    private final int id;
-    private final String title;
     private final String description;
     private final String genre;
     private final LocalDate releaseDate;
@@ -15,12 +13,12 @@ public class Movie
     //Index 0:Actors 1:Directors on the film
     private final HashSet<Staff>[] staffSets = new HashSet[2];
 
-    public Movie(int id, String title, String description, String genre, LocalDate releaseDate, float rating, int ratingCount)
+    public Movie(int id, String name, String description, String genre, LocalDate releaseDate, float rating, int ratingCount)
     {
+        // Calling superclass constructor
+        super(id, name);
         staffSets[0] = new HashSet<>();
         staffSets[1] = new HashSet<>();
-        this.id = id;
-        this.title = title;
         this.description = description;
         this.genre = genre;
         this.releaseDate = releaseDate;
@@ -56,16 +54,6 @@ public class Movie
     public String getDescription()
     {
         return description;
-    }
-
-    public String getTitle()
-    {
-        return title;
-    }
-
-    public int getId()
-    {
-        return id;
     }
 
 

@@ -72,7 +72,7 @@ public class Main
 
         // Print all Films from the given Actor and separate them by ","
         System.out.print("Filme: ");
-        System.out.println(dM.getStaff(0).get(actor_id).getMovies().stream().map(movie -> movie.getTitle()).collect(Collectors.joining(", ")));
+        System.out.println(dM.getStaff(0).get(actor_id).getMovies().stream().map(movie -> movie.getName()).collect(Collectors.joining(", ")));
 
         //Print all actor_results and seperate them by ","
         System.out.print("\nSchauspieler: ");
@@ -95,7 +95,7 @@ public class Main
 
         // Print all movie_results and separate by ","
         System.out.print("\nFilme: ");
-        System.out.println(movie_results.stream().map(movie -> movie.getTitle()).collect(Collectors.joining(",")));
+        System.out.println(movie_results.stream().map(movie -> movie.getName()).collect(Collectors.joining(",")));
     }
 
     private static void actorSearch(String arg, DataManager dM)
@@ -126,7 +126,7 @@ public class Main
 
         for (Movie movie : movie_results)
         {
-            System.out.println("ID: " + movie.getId() + " Title: " + movie.getTitle() + " Release: " + movie.getReleaseDate() +
+            System.out.println("ID: " + movie.getId() + " Title: " + movie.getName() + " Release: " + movie.getReleaseDate() +
                     " Genre: " + movie.getGenre() + " Rating: " + movie.getRating() + " Rating Count: " + movie.getRatingCount() + " Description: " + movie.getDescription());
         }
     }

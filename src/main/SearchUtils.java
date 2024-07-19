@@ -18,7 +18,7 @@ public class SearchUtils
         for (Movie movie : dM.getMovies().values())
         {
             // This ignores upper and Lower Case completely for searching
-            if (movie.getTitle().toLowerCase().contains(title_part.toLowerCase()))
+            if (movie.getName().toLowerCase().contains(title_part.toLowerCase()))
             {
                 hits.add(movie);
             }
